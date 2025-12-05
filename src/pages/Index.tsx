@@ -4,8 +4,8 @@ import { ContentCard } from "@/components/ContentCard";
 import { DownloadButton } from "@/components/DownloadButton";
 import { CalculatorModal } from "@/components/CalculatorModal";
 import { Calculator } from "lucide-react";
-import coverReceitas from "@/assets/cover-receitas.jpg";
-import planilhaBonus from "@/assets/planilha-bonus.jpg";
+import coverReceitas from "@/assets/cover-receitas.png";
+import planilhaBonus from "@/assets/planilha-bonus.png";
 
 // Links do Google Drive - substitua pelos links reais
 const LINK_RECEITAS = "https://drive.google.com/seu-link-receitas";
