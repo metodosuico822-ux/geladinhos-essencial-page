@@ -26,11 +26,11 @@ export const ContentCard = ({
         className
       )}
     >
-      <div className="aspect-video w-full overflow-hidden">
+      <div className="w-full overflow-hidden">
         <img
           src={image}
           alt={imageAlt}
-          className="w-full h-full object-cover"
+          className="w-full h-auto"
         />
       </div>
       
