@@ -8,7 +8,7 @@ import coverReceitas from "@/assets/cover-receitas.png";
 import planilhaBonus from "@/assets/planilha-bonus.png";
 
 // Links do Google Drive - substitua pelos links reais
-const LINK_RECEITAS = "https://drive.google.com/seu-link-receitas";
+const LINK_RECEITAS = "https://drive.google.com/file/d/178j1S0BDT82al_4cULLbcZBlbn7LKHbf/view?usp=sharing";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState<"receitas" | "bonus">("receitas");
