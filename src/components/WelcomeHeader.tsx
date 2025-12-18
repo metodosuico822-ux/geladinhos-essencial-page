@@ -9,10 +9,7 @@ export const WelcomeHeader = () => {
           Bem-vinda(o)!
         </h1>
         <p className="text-muted-foreground text-base leading-relaxed max-w-md mx-auto">
-          Aqui você tem um sistema simples para produzir, precificar e vender geladinhos gourmet com lucro, mesmo começando do zero.
-        </p>
-        <p className="text-primary font-medium mt-2">
-          Siga os passos abaixo e comece hoje.
+          Você agora tem acesso a um sistema simples para produzir, precificar e vender geladinhos gourmet com lucro, mesmo começando do zero.
         </p>
       </div>
 

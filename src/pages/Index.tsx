@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { TabNavigation, TabType } from "@/components/TabNavigation";
 import { ContentCard } from "@/components/ContentCard";
-import { DownloadButton } from "@/components/DownloadButton";
 import { CalculatorModal } from "@/components/CalculatorModal";
 import { WelcomeHeader } from "@/components/WelcomeHeader";
 import { PricingTable } from "@/components/PricingTable";
-import { Calculator, BookOpen } from "lucide-react";
-import coverReceitas from "@/assets/cover-receitas.png";
+import { RecipeCollection } from "@/components/RecipeCollection";
+import { Calculator } from "lucide-react";
 import planilhaBonus from "@/assets/planilha-bonus.png";
 
 // Links do Google Drive
@@ -28,47 +27,12 @@ const Index = () => {
 
       {/* Conteúdo principal */}
       <main className="px-4 pb-28 max-w-lg mx-auto space-y-6">
-        {/* Welcome Header - sempre visível */}
+        {/* Welcome Header - sempre visível (fora das abas) */}
         <WelcomeHeader />
 
         {/* Conteúdo da aba ativa */}
         {activeTab === "receitas" && (
-          <ContentCard
-            key="receitas"
-            image={coverReceitas}
-            imageAlt="Geladinhos gourmet coloridos com frutas frescas"
-            title="Coleção de Receitas Lucrativas"
-            description=""
-          >
-            {/* Microcopy explicativa */}
-            <div className="mb-4 p-4 bg-secondary/30 rounded-xl border border-border/30">
-              <p className="text-sm text-foreground leading-relaxed">
-                Receitas organizadas para vender todos os dias, divididas em:
-              </p>
-              <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  Gourmet Tradicionais
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  Fitness
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  Alcoólicas
-                </li>
-              </ul>
-              <p className="mt-2 text-xs text-primary font-medium">
-                Todas testadas e prontas para produção.
-              </p>
-            </div>
-
-            <DownloadButton href={LINK_RECEITAS}>
-              <BookOpen className="w-5 h-5" />
-              Acessar Coleção de Receitas Lucrativas
-            </DownloadButton>
-          </ContentCard>
+          <RecipeCollection pdfLink={LINK_RECEITAS} />
         )}
 
         {activeTab === "calculadora" && (
@@ -99,7 +63,7 @@ const Index = () => {
                   <li>• Lucro desejado: 100%</li>
                 </ul>
                 <p className="mt-2 text-sm text-primary font-medium">
-                  → Preço sugerido: automaticamente calculado
+                  → O preço por unidade é calculado automaticamente.
                 </p>
               </div>
             </div>
