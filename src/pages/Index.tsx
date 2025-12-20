@@ -27,12 +27,12 @@ const Index = () => {
 
       {/* Conteúdo principal */}
       <main className="px-4 pb-28 max-w-lg mx-auto space-y-6">
-        {/* Welcome Header - sempre visível (fora das abas) */}
-        <WelcomeHeader />
-
         {/* Conteúdo da aba ativa */}
         {activeTab === "receitas" && (
-          <RecipeCollection pdfLink={LINK_RECEITAS} />
+          <>
+            <WelcomeHeader />
+            <RecipeCollection pdfLink={LINK_RECEITAS} />
+          </>
         )}
 
         {activeTab === "calculadora" && (
