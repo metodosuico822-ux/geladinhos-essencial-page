@@ -3,9 +3,6 @@ import gourmetImage from "@/assets/geladinhos-gourmet.png";
 import fitnessImage from "@/assets/geladinhos-fitness.png";
 import alcoolicosImage from "@/assets/geladinhos-alcoolicos.png";
 
-interface RecipeCollectionProps {
-  pdfLink: string;
-}
 
 const recipeCategories = [
   {
@@ -14,6 +11,7 @@ const recipeCategories = [
     description: "Sabores cremosos e clássicos que vendem todos os dias e têm alta aceitação.",
     buttonText: "Acessar Receitas Gourmet",
     image: gourmetImage,
+    link: "https://drive.google.com/file/d/1kUuc1kcdx3u4jiGQuuL3ea7AAFbJZ_-6/view",
   },
   {
     id: "fitness",
@@ -21,6 +19,7 @@ const recipeCategories = [
     description: "Receitas com apelo saudável, ideais para públicos fitness e vendas o ano inteiro.",
     buttonText: "Acessar Receitas Fitness",
     image: fitnessImage,
+    link: "https://drive.google.com/file/d/1AqzDmzOEHT3j_nQuWImzdhdSHu_Lpq4T/view?usp=sharing",
   },
   {
     id: "alcoolicos",
@@ -28,10 +27,11 @@ const recipeCategories = [
     description: "Opções diferenciadas com maior valor percebido e margem de lucro.",
     buttonText: "Acessar Receitas Alcoólicas",
     image: alcoolicosImage,
+    link: "https://drive.google.com/file/d/14EFVdm2Tg_ucYZ8eAkoOdAbKhNrIF9vx/view?usp=sharing",
   },
 ];
 
-export const RecipeCollection = ({ pdfLink }: RecipeCollectionProps) => {
+export const RecipeCollection = () => {
   return (
     <div className="space-y-4 animate-fade-in">
       {/* Header */}
@@ -67,7 +67,7 @@ export const RecipeCollection = ({ pdfLink }: RecipeCollectionProps) => {
               </p>
               
               <a
-                href={pdfLink}
+                href={category.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-2.5 px-4 rounded-xl shadow-sm hover:shadow transition-all duration-200 text-sm"
