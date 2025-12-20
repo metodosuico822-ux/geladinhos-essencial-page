@@ -31,7 +31,7 @@ const Index = () => {
         {activeTab === "receitas" && (
           <>
             <WelcomeHeader />
-            <RecipeCollection pdfLink={LINK_RECEITAS} />
+            <RecipeCollection />
           </>
         )}
 
